@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>애니메이션</title>
+  <style>
+
+    h1{
+      color: black;
+      font-size: 64px;
+
+      animation-name: colorchange;
+      animation-duration: 3s;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+
+      /*
+        프레임 진행 방향
+        normal: 처음부터 정방향으로
+        reverse: 역방향으로
+        alternate: 정방향->역방향 바꿔가면서
+        alternate-reverse: 역방향->정방향 바꿔가면서
+      */
+      animation-direction: alternate;
+      animation-play-state: paused; /* paused: 애니메이션 동작 불가 기능 */
+      
+      /* 속도 그래프를 동작에 반영 */
+      animation-timing-function: ease;
+    }
+
+    h1:hover{
+      animation-play-state: running;
+    }
+    /* 프레임 만들기 */
+    @keyframes colorchange{
+      33%{
+        color: red;
+      }
+      66%{
+        color: orange
+      }
+      100%{
+        color: green;
+      }
+    }
+
+    .circle{
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      border-radius: 50px;
+      position: relative;
+      left: 0;
+
+      /* 애니메이션은 철저히 정해진 하나의 순서가 있지 않다. 
+         주의할 것은, 시간을 두개 쓰면 듀레이션이 먼저다.
+      */
+      animation: moving 3s alternate infinite linear;
+    }
+
+    @keyframes moving{
+      to{left: 0;}
+      from{left: 200px;}
+    }
+  </style>
+</head>
+<body>
+  <h1>빙글빙글</h1>
+  <div class="circle"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

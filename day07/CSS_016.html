@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>z 인덱스와 미디어 쿼리</title>
+  <style>
+    .box{
+      /* 부모인 body가 변할 때마다 절반씩으로 조절한다. */
+      width: 50%; height: 100px;
+      position: relative;
+    }
+    .box:nth-child(1){
+      background-color: red;
+      z-index: 4;
+    }
+    .box:nth-child(2){
+      background-color: orange;
+      bottom: 50px;
+      z-index: 3;
+    }
+    .box:nth-child(3){
+      background-color: yellow;
+      bottom: 100px;
+      z-index: 2;
+    }
+    .box:nth-child(4){
+      background-color: green;
+      bottom: 150px;
+      z-index: 1;
+    }
+
+    /*
+    미디어 쿼리 : CSS 모듈로써, 기기에 따른 스타일 변화를 줄 수 있는 기능
+    사용하기
+
+    미디어 유형 : all(모든 미디어), 
+    screen(컴퓨터 기기 화면), print(인쇄물), speech(낭독기)
+
+    미디어 조건: 크기(또는 해상도)
+
+    반응형 웹을 만들 때는 거의 너비를 기준으로 한다.
+    => 사용자와 개발자의 편의를 고려.
+    */
+    #responsive{
+      width: 100px; height: 100px;
+      background-color: brown;
+    }
+
+    @media all and (max-width: 1000px){
+      #responsive{
+        background-color: tomato;
+      }
+    }
+    @media all and (max-width: 800px){
+      #responsive{
+        background-color: teal;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="responsive"></div>
+
+
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>포지셔닝 1</title>
+  <style>
+    .box {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      background: tomato;
+      color: white;
+    }
+
+    #one{
+      position: absolute;
+    }
+
+    #two{
+      left: 50px; right: 50px;
+      position: relative;
+      top: 50px; bottom: 50px;
+    }
+
+    .inner{
+      width: 50px; height: 50px;
+      background-color: navy;
+      position: absolute;
+      left: 50px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box" id="one">1</div>
+  <div class="box" id="two">2
+    <div class="inner"></div>
+  </div>
+  <div class="box" id="three">3</div>
+  <div class="box" id="four">4</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

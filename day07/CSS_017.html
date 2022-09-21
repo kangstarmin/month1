@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>변형과 전환</title>
+  <style>
+    .box{
+      width: 100px; height: 100px;
+      background-color: skyblue;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white
+    }
+
+    .box:nth-child(2){
+      transform: translate(100px, 200px);
+    }
+    .box:nth-child(3){
+      transform: scale(1, 1);
+    }
+    .box:nth-child(4){
+      transform: rotate(45deg);
+    }
+    .box:nth-child(5){
+      transform: skew(45deg);
+    }
+
+    h1{
+      width: 0px; 
+      border: 5px solid crimson;
+
+      /* 넘치면 가린다. */
+      overflow:hidden;
+
+      /* 만일 나의 속성 중 무언가가 변화하면 이런 효과를 줘라. */
+      transition-property: width;
+
+      /* 변하는데 걸리는 시간*/
+      transition-duration: 1s;
+      
+      /* 변화가 시작되기 전의 지연 시간 */
+      transition-delay: 0s;
+
+      transition-timing-function: ease; /* 변화하는 동안의 속도 그래프 */
+
+      /* 한 번에 쓸 때:
+        transition: width 5s 0s ease; */
+    }
+
+    h1:hover{
+      width: 500px;
+    }
+  </style>
+</head>
+<body>
+  <h1>qweqweqwe</h1>
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

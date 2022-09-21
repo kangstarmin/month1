@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" 
+  content="width=device-width, initial-scale=1.0">
+  <title>디지털 시계 만들기</title>
+  <style>
+    @font-face {
+      font-family: 'LAB디지털';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    *{ font-family: 'LAB디지털'; }
+    html, body{ margin: 0; }
+    .container{ text-align: center; }
+    .clock{
+      color:red; background-color: black; 
+      width: 200px;
+      
+      /* 여백의 양옆을 auto로 한다 : 여백을 동일하게 나눈다. */
+      margin: 5px auto;
+
+      
+      border: 2px solid black;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="clock">
+      <h1 id="time">19:30:20</h1>
+    </div>
+    <button id="stop">STOP</button>
+    <button id="go">GO</button>
+  </div>
+</body>
+</html>

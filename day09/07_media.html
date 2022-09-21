@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어 쿼리</title>
+  <!-- 링크 태그의 미디어는 미디어 쿼리 조건을 삽입하는 속성이다 -->
+  <link href="../07_style.css" rel="stylesheet"
+  media="screen and (max-width: 500px)">
+  
+  <style>
+    img{
+      width: 200px;
+      height: 200px;
+    }
+
+    /* 미디어 조건은 범위가 넓은 것부터 쓴다. */
+    @media screen and (max-width: 1200px){
+      img{
+        width: 800px;
+        height: 800px;
+      }
+    }  
+    @media screen and (max-width: 800px){
+      img{
+        width: 400px;
+        height: 400px;
+      }
+    }  
+  </style>
+</head>
+<body>
+  <img src="./imgs/1.png">
+</body>
+</html>

@@ -1,0 +1,92 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 1px black;
+  z-index: 20;
+}
+
+.header_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 16px;
+}
+
+.start{
+  height: 40px;
+  line-height: 40px;
+}
+
+.hambuger{
+  border: none;
+  background-color: transparent;
+  font-size: 1.5em;
+}
+
+.title{
+  font-size: 1.2rem;
+  margin-left: 6px;
+}
+
+.center{
+  width: 50%;
+}
+
+.header_form{
+  display: flex;
+  max-width: 100%;
+}
+
+.input_text{
+  width: calc(100% - 60px);
+  height: 40px;
+  padding: 0 6px;
+  border: 1px solid #8f8f8f;
+  border-right: none;
+  border-radius: 2px 0 0 2px;
+}
+
+.input_button{
+  border: 1px solid #8f8f8f;
+  border-left: none;
+  border-radius: 0 2px 2px 0;
+}
+
+.end{
+  display: flex;
+
+}
+
+.search{
+  border: none;
+  margin-right: 5px;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.proflie{
+  width: 40px;
+  height: 40px;
+  border: 1px solid tomato;
+  border-radius: 50%;
+  background-color: tomato;
+}
+
+@media screen and (max-width: 800px){
+  .title{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .center{
+    display: none;
+  }
+  .search{
+    display: block;
+  }
+}
